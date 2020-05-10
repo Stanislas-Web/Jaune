@@ -1,0 +1,49 @@
+<%- include('header') %>
+
+<main class="detail">
+        <div>
+            <img src="<%= produits.image %>" alt="">
+        </div>
+        <div>
+            <p class="link"><a href="/produits">ACCUEIL </a> / AUTRES</p>
+            <h1 class="nom">
+                <%= produits.name %> 
+            </h1>
+            <div class="line"></div>
+            <p class="prix">
+                <span class="spanPrix"><span class="spanDollard">$</span><%= produits.prix %></span> / <%= produits.classPrix %>
+            </p>
+
+            <p class="description">
+                <%= produits.description %> 
+            </p>
+
+            <p class="quantite">
+                <%= produits.qteDispo %> en stock 
+            </p>
+            <p> 
+            
+                
+                <div>
+                    <div class="div-rond">
+                         <p>-</p>
+                    </div>
+                    <form action="">
+                        <input type="text" value="1">
+                    </form>
+                    <div class="div-rond">
+                        <p>+</p>
+                    </div>
+                </div>
+                <br>
+                <button>
+                    AJOUTER AU PANIER
+                </button>
+
+        </div>
+
+
+
+</main>
+
+<%- include('footer') %>

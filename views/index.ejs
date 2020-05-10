@@ -1,0 +1,83 @@
+<%- include('header') %>
+    <main>
+        <div class="main-top">
+            <img src="/public/img/logo.jpg" alt=""><br>
+            <p> <i> Chez nous, vous êtes « satisfait ou remboursé »!</i></p>
+            <div>
+                <div class="img-banner-top">
+
+                    <div class="img">
+
+                    </div>
+                    <div class="img">
+
+                    </div>
+                    <div class="img">
+
+                    </div>
+                </div>
+                <div  class="img-banner-bottom">
+
+                    <div class="img">
+
+                    </div>
+                    <div class="img">
+                       <p>Attention! Plus que</p>
+                        <p>pour commander votre dose hebdomadaire de vitamines!</p>
+                    </div>
+                    <div class="img">
+
+                    </div>
+                                       
+                </div>
+            </div>
+        </div>
+
+
+        <div class="main-bottom">
+            <div class="ligne-jaune">
+
+            </div>
+            <div class="block-jaune">
+                <p>Nos produits cette semaine</p>
+
+            </div>
+
+            <div class="content">
+                <% for( produit of produits ) { %>
+                <div class="enfant">
+                    <a href="/produits/<%= produit.id %>">
+                    <img src="<%= produit.image %>" alt="">
+                    </a>
+                    <div class="contenu">
+                        <p><a href="/produits/<%= produit.id %>"><%= produit.name %></a></p>
+                        <p><span>$<%= produit.prix %></span>/ <%= produit.classPrix %> <br>
+                            Quantité encore disponible:<%= produit.qteDispo %> 
+                        </p>
+                        <br>
+                        <div>
+                            <div class="div-rond">
+                                 <p>-</p>
+                            </div>
+                            <form action="">
+                                <input type="text" value="1">
+                            </form>
+                            <div class="div-rond">
+                                <p>+</p>
+                            </div>
+                        </div>
+                        <br><br>
+                        <button>
+                            AJOUTER AU PANIER
+                        </button>
+                        
+
+                    </div>
+                </div>
+                <% } %>
+
+            </div>
+
+        </div>
+    </main>
+    <%- include('footer') %>
